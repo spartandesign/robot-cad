@@ -22,6 +22,7 @@ const BOOK = [
   ]},
   { unit: "Reference", chapters: [
     { n: "V5", title: "V5 Quick Facts", file: "v5-facts.html" },
+    { n: "GL", title: "Onshape glossary", file: "glossary.html" },
   ]},
 ];
 
