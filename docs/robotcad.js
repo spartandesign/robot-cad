@@ -7,6 +7,7 @@
      <div class="sim fourbarsim"></div>    four-bar linkage
      <div class="sim holecomp"></div>      laser hole compensation
      <div class="sim reviewsim"></div>     design review checklist
+     <div class="sim workplanesim"></div>  TinkerCAD SVG export: what crosses the workplane
    Facts used (VEX Library): 0.5 in hole pitch; #8-32 screws (0.164 in);
    gears 12/36/60/84 T; gear ratio = driven : driving; cartridges 100/200/600 RPM.
    ============================================================ */
@@ -192,6 +193,40 @@
       $(".hc-d", el).textContent = `${f3(need - k)} in`; $(".hc-r", el).textContent = `${f3(need)} in`;
     }
     $$("select,input", el).forEach(x => x.addEventListener("input", calc)); calc();
+  });
+
+  // ---------- 7. TinkerCAD workplane → SVG export ----------
+  $$(".workplanesim").forEach(el => {
+    el.innerHTML = `<div class="rc-row"><label><input type="checkbox" class="wp-on" checked> Plate sits on the workplane</label>
+      <label><input type="checkbox" class="wp-hole" checked> Screw-hole cylinders set to <b>Hole</b></label>
+      <label>Team number <select class="wp-txt"><option value="raised">raised 1 mm on top</option><option value="cut">set to Hole, through the plate</option></select></label></div>
+      <svg class="rc-svg" viewBox="0 0 640 300" role="img" aria-label="Side view of a TinkerCAD design above the workplane, and the SVG outline it exports"></svg>
+      <p class="sim__say wp-say" aria-live="polite"></p>`;
+    const svg = $("svg", el);
+    function draw() {
+      const on = $(".wp-on", el).checked, hole = $(".wp-hole", el).checked, txt = $(".wp-txt", el).value;
+      const s = 3, x0 = 40, wy = 200, lift = on ? 0 : 5, th = 3; // mm scale 3 px/mm, plate 76.2 x 50.8 mm
+      let g = `<text x="40" y="22" font-size="14" font-weight="800" fill="${C.navy}">Side view</text><text x="360" y="22" font-size="14" font-weight="800" fill="${C.navy}">What the SVG gets (top view)</text>`;
+      g += `<line x1="20" y1="${wy}" x2="300" y2="${wy}" stroke="${C.blue}" stroke-width="2" stroke-dasharray="6 5"/><text x="22" y="${wy + 18}" font-size="12" fill="${C.blue}">workplane (z = 0)</text>`;
+      const py = wy - (lift + th) * s;
+      g += `<rect x="${x0}" y="${py}" width="${76.2 * s}" height="${th * s}" fill="${C.tan}" stroke="${C.orange}" stroke-width="2"/>`;
+      [12.7, 63.5].forEach(hx => g += `<rect x="${x0 + (hx - 2.2) * s}" y="${py - 6}" width="${4.4 * s}" height="${th * s + 12}" fill="${hole ? "none" : C.steel2}" stroke="${C.gray}" stroke-width="1.5" stroke-dasharray="${hole ? "4 3" : "0"}"/>`);
+      const ty = txt === "raised" ? py - 1 * s : py;
+      g += `<rect x="${x0 + 26 * s}" y="${ty}" width="${24 * s}" height="${txt === "raised" ? 1 * s : th * s}" fill="${txt === "raised" ? C.navy : "none"}" stroke="${C.navy}" stroke-width="1.5" stroke-dasharray="${txt === "raised" ? "0" : "4 3"}"/>`;
+      // top view
+      const tx = 360, ty0 = 60, k = 3;
+      let out = "", say;
+      if (!on) { out = `<text x="${tx + 114}" y="${ty0 + 80}" font-size="15" font-weight="700" fill="${C.red}" text-anchor="middle">empty: nothing crosses z = 0</text>`; say = "Nothing touches the workplane, so the SVG comes out empty. Drop the plate to the workplane (press D), then export again."; }
+      else {
+        out = `<rect x="${tx}" y="${ty0}" width="${76.2 * k}" height="${50.8 * k}" fill="none" stroke="red" stroke-width="2"/>`;
+        if (hole) [12.7, 63.5].forEach(hx => out += `<circle cx="${tx + hx * k}" cy="${ty0 + 25.4 * k}" r="${2.2 * k}" fill="none" stroke="red" stroke-width="2"/>`);
+        if (txt === "cut") out += `<text x="${tx + 38.1 * k}" y="${ty0 + 25.4 * k + 9}" font-size="28" font-weight="800" fill="none" stroke="red" stroke-width="1.5" text-anchor="middle">2822</text>`;
+        say = (hole ? "Both screw holes export as cut lines. " : "The cylinders are Solid, so they merge into the plate: no hole outlines. Set them to Hole and group. ") +
+              (txt === "raised" ? "The raised number sits above z = 0, so it doesn't export. To mark it, engrave it in the laser software instead." : "The number is cut through, so it exports. Watch out: the middles of characters like 8, 0, A, and O fall out. Use a stencil font, or engrave instead.");
+      }
+      svg.innerHTML = g + out; $(".wp-say", el).textContent = say;
+    }
+    $$("input,select", el).forEach(x => x.addEventListener("input", draw)); draw();
   });
 
   // ---------- 6. Design review checklist ----------

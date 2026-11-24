@@ -8,15 +8,17 @@
 const BOOK = [
   { unit: "Getting Started", chapters: [
     { n: "GS", title: "Start Here", file: "start-here.html" },
+    { n: "CAL", title: "Semester calendar", file: "calendar.html" },
     { n: "DEV", title: "Laptop or iPad?", file: "devices.html" },
   ]},
   { unit: "Modules", chapters: [
     { n: 1, title: "V5 in Onshape", file: "module-1.html" },
-    { n: 2, title: "Custom printed parts", file: "module-2.html" },
-    { n: 3, title: "Gears & drivetrains", file: "module-3.html" },
+    { n: 2, title: "Gears & drivetrains", file: "module-2.html" },
+    { n: 3, title: "Custom printed parts", file: "module-3.html" },
     { n: 4, title: "Mechanisms", file: "module-4.html" },
     { n: 5, title: "Laser-cut plates", file: "module-5.html" },
-    { n: 6, title: "Subsystem project", file: "module-6.html" },
+    { n: 6, title: "TinkerCAD for the laser", file: "module-6.html" },
+    { n: 7, title: "Subsystem project", file: "module-7.html" },
   ]},
   { unit: "Reference", chapters: [
     { n: "V5", title: "V5 Quick Facts", file: "v5-facts.html" },
