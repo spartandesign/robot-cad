@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 3 · Gears and Drivetrains — Robot CAD</title><link rel="stylesheet" href="styles.css"></head>
+<body data-chapter="3">
+<header class="topbar"><div class="topbar__in"><span class="topbar__mark">SPARTAN DESIGN · VEX V5</span><span class="topbar__title">Robot CAD</span>
+<span class="topbar__school">Spartan Design Robotics · Team 2822</span><button class="menu-btn" id="menuBtn" aria-label="Toggle contents">Contents</button></div></header>
+<div class="book"><nav class="toc" id="toc" aria-label="Table of contents"></nav>
+<main class="main">
+<div class="chead"><div class="chead__in"><div class="chead__num">03</div><div><p class="chead__eyebrow">Module 3 of 6</p><h1 class="chead__title">Gears and Drivetrains</h1></div></div></div>
+<div class="lede"><p>Speed or strength? Every drivetrain, lift, and intake is a trade between the two. This module turns gear ratios into numbers you can design with, then has you model a gear train that really meshes in Onshape.</p></div>
+<article class="prose wrap">
+<div class="listen" data-src="media/rc3-gears-listen.mp3" data-min="3"></div>
+
+      <section class="mission" aria-label="Mission card">
+        <div class="mission__head"><span class="apb apb--activity">🧩 PLTW Activity</span><span class="mission__when">Module 3 · set by your coach</span></div>
+        <p class="mission__apb">A <strong>PLTW Activity</strong> teaches a skill step by step. Follow the steps closely; the goal is to learn the tool.</p>
+        <div class="mission__grid">
+          <div class="mission__box mission__box--goal"><h3>🎯 Your goal</h3><ul><li>I can find a gear ratio as driven : driving and predict speed and torque.</li><li>I can calculate wheel speed from motor RPM and wheel size.</li><li>I can model a gear train in Onshape that turns together with a gear relation.</li></ul></div>
+          <div class="mission__box"><h3>🧰 You’ll need</h3><ul><li>Onshape and the V5 parts library</li><li>The gear calculator on this page</li><li>A real gear set to check tooth counts</li><li>Your notebook</li></ul></div>
+          <div class="mission__box"><h3>⏳ Time and limits</h3><ul><li><strong>2 team meetings, about 60 minutes each.</strong></li><li>Gears come in 12, 36, 60, and 84 teeth.</li><li>Motor cartridges: red 100, green 200, or blue 600 RPM.</li><li>Gears must mesh at the right center distance. Check it in CAD.</li></ul></div>
+        </div>
+      </section>
+      <h2>Step-by-step plan</h2>
+      <p class="plan__intro">Follow the steps in order. The minutes are a guide. Check off each checkpoint before you move on.</p>
+      <div class="plan">
+        <div class="session"><p class="session__head">Meeting 1 · about 60 min</p><ol class="steps"><li><span class="steps__min">10 min</span><span>Watch the video.</span></li><li><span class="steps__min">15 min</span><span>Work three ratios by hand: 60:12, 12:60, 84:12.</span></li><li><span class="steps__min">20 min</span><span>Use the gear calculator: find a drivetrain setup that hits your target speed.</span></li><li><span class="steps__min">15 min</span><span>Write your choice and the numbers in your notebook.</span></li></ol><p class="checkpoint"><span aria-hidden="true">✔</span> <strong>Checkpoint:</strong> A chosen ratio, with speed and torque worked out.</p></div>
+        <div class="session"><p class="session__head">Meeting 2 · about 60 min</p><ol class="steps"><li><span class="steps__min">10 min</span><span>Insert the two gears and two shafts from the library.</span></li><li><span class="steps__min">20 min</span><span>Add revolute mates, then a gear relation with your ratio.</span></li><li><span class="steps__min">15 min</span><span>Check the mesh: do the teeth touch without overlapping? Do the shafts land on holes?</span></li><li><span class="steps__min">15 min</span><span>Animate it. Screenshot it. Take the self-check.</span></li></ol><p class="checkpoint"><span aria-hidden="true">✔</span> <strong>Checkpoint:</strong> Your gears turn together in Onshape at the right ratio.</p></div>
+      </div>
+      <h2>Laptop or iPad?</h2>
+      <div class="tablewrap"><table class="dtable devtable"><thead><tr><th>Task</th><th>💻 Laptop</th><th>📱 iPad</th></tr></thead><tbody><tr><th scope="row">Gear relation</th><td>Assembly → Relations → Gear. Select both revolute mates.</td><td>Same menu in the app. Zoom in to pick each mate in the list.</td></tr><tr><th scope="row">Checking the mesh</th><td>Zoom in on the teeth from the top view.</td><td>Pinch to zoom on the teeth. Tap the View Cube to look straight down.</td></tr><tr><th scope="row">Gear calculator</th><td>Use the menus with the mouse.</td><td>Tap the menus. Turn sideways to see the whole tool.</td></tr></tbody></table></div>
+      <p class="plan__more">More device help: <a href="devices.html">Laptop or iPad? The full guide</a>.</p>
+
+<h2>Watch first</h2><figure class="video"><video controls preload="metadata" playsinline poster="media/rc3-gears-poster.jpg" aria-label="Narrated walkthrough of Gears and Drivetrains, with captions on screen"><source src="media/rc3-gears.mp4" type="video/mp4">Your browser can't play this video. <a href="media/rc3-gears.mp4">Download it here</a>.</video><figcaption>Narrated walkthrough (about 1 minute). Captions are built into the video.</figcaption></figure><details class="transcript"><summary>Read the transcript</summary><p>Every drivetrain, lift, and intake trades speed for strength. Gear ratios turn that trade into numbers. VEX writes a gear ratio as driven to driving: output teeth over input teeth. A twelve tooth gear on the motor, driving a sixty tooth gear, is sixty to twelve. That's five to one. The output turns five times slower, with five times the torque. The motor's cartridge sets the starting speed: red is one hundred RPM, green is two hundred, and blue is six hundred. Red for torque, green for drivetrains, and blue for speed. To get robot speed, multiply RPM by pi and the wheel diameter, then divide by sixty. Two hundred RPM on a three and a quarter inch wheel is about thirty-four inches per second. But faster isn't always better. Less torque makes a robot harder to control. In Onshape, give each gear a revolute mate. Then add a gear relation, so turning one turns the other. Zoom in and check the mesh: the teeth should touch, without overlapping.</p></details>
+
+<h2>The one number: gear ratio</h2>
+<p>VEX writes a gear ratio as <strong>driven : driving</strong>, output teeth over input teeth. A 12-tooth gear on the motor driving a 60-tooth gear is 60 : 12 = <strong>5 : 1</strong>.</p>
+<ul><li><strong>Speed:</strong> output RPM = motor RPM ÷ ratio.</li><li><strong>Torque:</strong> output torque = motor torque × ratio.</li>
+<li><strong>Compound gears</strong> (two stages on shared shafts) multiply: 5 : 1 then 3 : 1 is 15 : 1.</li></ul>
+<p>The V5 Smart Motor’s cartridge sets the starting speed: <strong>red 100 RPM</strong> (torque), <strong>green 200 RPM</strong> (drivetrains), and <strong>blue 600 RPM</strong> (speed).</p>
+<h2>From RPM to robot speed</h2>
+<p>A wheel moves one circumference per turn. Wheel speed in inches per second = RPM × π × wheel diameter ÷ 60. Divide by 12 for feet per second. Measure your own wheels; common V5 sizes are 2.75, 3.25, and 4 in.</p>
+<div class="card card--note"><p><strong>Faster isn’t always better.</strong> More speed means less torque and a harder robot to control. Pick the ratio that does the job.</p></div>
+<h2>Try it: gear calculator</h2>
+<p>Pick a cartridge, gears, and wheel. Add a second stage to see compound gearing.</p>
+<div class="sim gearsim"></div>
+<h2>Model a gear train</h2><div class="tut"><div class="tut__step"><p class="tut__goal">Goal: the right parts</p><h3>Insert gears and shafts</h3><p>In an Assembly, insert your two gears and two shafts from the V5 library, plus the metal they mount on.</p><p class="tut__check"><strong>✅ Check it:</strong> the tooth counts match your notebook.</p></div><div class="tut__step"><p class="tut__goal">Goal: gears that can spin</p><h3>Add revolute mates</h3><p>Give each gear a revolute mate on its shaft axis.</p><p class="tut__check"><strong>✅ Check it:</strong> drag each gear. It spins on its own shaft.</p></div><div class="tut__step"><p class="tut__goal">Goal: gears that turn together</p><h3>Add a gear relation</h3><p>Choose <em>Gear relation</em>, select both revolute mates, and enter your ratio.</p><p class="tut__check"><strong>✅ Check it:</strong> turn one gear. The other turns the opposite way at the right speed.</p></div><div class="tut__step"><p class="tut__goal">Goal: a mesh that works in metal</p><h3>Check the center distance</h3><p>From the top view, zoom in on the teeth. They should touch without overlapping, and both shafts should pass through real holes.</p><p class="tut__check"><strong>✅ Check it:</strong> no overlap and no gap. If the gears don’t land on holes, try a different gear pair or mounting spot.</p></div></div><div class="card card--note"><p class="card__title"><span class="ic">📓</span> For your engineering notebook</p><ul><li>Your ratio math by hand, with speed and torque.</li><li>The gear calculator settings you chose, and why.</li><li>A screenshot of the meshed gears in Onshape.</li></ul></div>
+<h2>Check your understanding</h2>
+<div class="quiz"><script type="application/json">[{"q": "A 12-tooth gear on the motor drives a 60-tooth gear. What is the ratio?", "options": ["1 : 5", "5 : 1", "12 : 1", "60 : 1"], "answer": 1, "why": "Driven : driving = 60 : 12 = 5 : 1.", "hint": "Output teeth over input teeth."}, {"q": "With that 5 : 1 ratio on a 200 RPM motor, how fast does the output turn?", "options": ["1000 RPM", "200 RPM", "40 RPM", "5 RPM"], "answer": 2, "why": "Output RPM = 200 ÷ 5 = 40 RPM, with 5× the torque.", "hint": "Divide the motor speed by the ratio."}, {"q": "Which cartridge is meant for high speed?", "options": ["Red, 100 RPM", "Green, 200 RPM", "Blue, 600 RPM", "They’re all the same"], "answer": 2, "why": "Blue spins at 600 RPM: fast, with low torque.", "hint": "The biggest number."}, {"q": "Two stages: 5 : 1 and then 3 : 1. What is the total ratio?", "options": ["8 : 1", "15 : 1", "2 : 1", "5 : 3"], "answer": 1, "why": "Compound ratios multiply: 5 × 3 = 15 : 1.", "hint": "Multiply, don’t add."}]</script></div>
+<p class="sources"><strong>Sources:</strong> VEX Library (kb.vex.com) for V5 hardware facts; Onshape Help and the Onshape blog “Using the VEX IQ and VEX V5 Parts Libraries” for Onshape steps. Game rules: always the current V5RC game manual. See <a href="v5-facts.html">V5 Quick Facts</a>.</p>
+</article>
+<nav class="pager" id="pager" aria-label="Chapter navigation"></nav>
+</main></div>
+<script src="nav.js"></script>
+<script src="learn.js"></script>
+<script src="robotcad.js"></script>
+</body></html>

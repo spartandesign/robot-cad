@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V5 Quick Facts — Robot CAD</title><link rel="stylesheet" href="styles.css"></head>
+<body data-chapter="V5">
+<header class="topbar"><div class="topbar__in"><span class="topbar__mark">SPARTAN DESIGN · VEX V5</span><span class="topbar__title">Robot CAD</span>
+<span class="topbar__school">Spartan Design Robotics · Team 2822</span><button class="menu-btn" id="menuBtn" aria-label="Toggle contents">Contents</button></div></header>
+<div class="book"><nav class="toc" id="toc" aria-label="Table of contents"></nav>
+<main class="main">
+<div class="chead"><div class="chead__in"><div class="chead__num">V5</div><div><p class="chead__eyebrow">Reference</p><h1 class="chead__title">V5 Quick Facts</h1></div></div></div>
+<article class="prose wrap">
+
+<p>The numbers this book uses, with where they come from. When in doubt, measure the real part with calipers.</p>
+<div class="tablewrap"><table class="dtable"><thead><tr><th>Item</th><th>Value</th><th>Note</th></tr></thead><tbody>
+<tr><td>Hole spacing (pitch)</td><td>0.5 in</td><td>VEX counts sizes in pitch; 16 pitch = 8 in.</td></tr>
+<tr><td>Screws</td><td>#8-32, 0.164 in thread</td><td>Printed clearance holes: start near 0.180 in and test.</td></tr>
+<tr><td>Standard shaft</td><td>⅛ in square</td><td>Works with standard motion parts.</td></tr>
+<tr><td>High-strength shaft</td><td>¼ in square</td><td>Won’t pass through the square holes in metal; needs HS parts.</td></tr>
+<tr><td>Gears</td><td>12, 36, 60, 84 teeth</td><td>Standard and high-strength gears mesh with each other.</td></tr>
+<tr><td>Motor cartridges</td><td>Red 100 · Green 200 · Blue 600 RPM</td><td>Red for torque, green for drivetrains, blue for speed.</td></tr>
+</tbody></table></div>
+<h2>Formulas</h2>
+<ul><li><strong>Gear ratio</strong> = driven teeth : driving teeth (VEX’s convention)</li>
+<li><strong>Output RPM</strong> = motor RPM ÷ ratio · <strong>Output torque</strong> = motor torque × ratio</li>
+<li><strong>Compound ratio</strong> = stage 1 ratio × stage 2 ratio</li>
+<li><strong>Wheel speed (in/s)</strong> = RPM × π × wheel diameter ÷ 60</li>
+<li><strong>Laser hole</strong>: draw it at (hole you need − kerf)</li></ul>
+<p class="sources"><strong>Sources:</strong> VEX Library (kb.vex.com): Overview of VEX Screws; Using V5 Shafts; Using Spur Gears with the V5 Motor; Using Gear Ratios with the V5 Motor; Switching the V5 Motor Gear Cartridge; Using the Printable VEX V5 Parts Ruler. Onshape: Using the VEX IQ and VEX V5 Parts Libraries; Onshape Help: Gear Relation.</p>
+</article>
+<nav class="pager" id="pager" aria-label="Chapter navigation"></nav>
+</main></div>
+<script src="nav.js"></script>
+<script src="learn.js"></script>
+<script src="robotcad.js"></script>
+</body></html>

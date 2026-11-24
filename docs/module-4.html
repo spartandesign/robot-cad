@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 4 · Mechanisms in Motion — Robot CAD</title><link rel="stylesheet" href="styles.css"></head>
+<body data-chapter="4">
+<header class="topbar"><div class="topbar__in"><span class="topbar__mark">SPARTAN DESIGN · VEX V5</span><span class="topbar__title">Robot CAD</span>
+<span class="topbar__school">Spartan Design Robotics · Team 2822</span><button class="menu-btn" id="menuBtn" aria-label="Toggle contents">Contents</button></div></header>
+<div class="book"><nav class="toc" id="toc" aria-label="Table of contents"></nav>
+<main class="main">
+<div class="chead"><div class="chead__in"><div class="chead__num">04</div><div><p class="chead__eyebrow">Module 4 of 6</p><h1 class="chead__title">Mechanisms in Motion</h1></div></div></div>
+<div class="lede"><p>A robot scores with its mechanisms: lifts, claws, and intakes. This module models a mechanism that moves in Onshape, so you can check its reach and catch collisions before you build.</p></div>
+<article class="prose wrap">
+<div class="listen" data-src="media/rc4-mechanisms-listen.mp3" data-min="2"></div>
+
+      <section class="mission" aria-label="Mission card">
+        <div class="mission__head"><span class="apb apb--activity">🧩 PLTW Activity</span><span class="mission__when">Module 4 · set by your coach</span></div>
+        <p class="mission__apb">A <strong>PLTW Activity</strong> teaches a skill step by step. Follow the steps closely; the goal is to learn the tool.</p>
+        <div class="mission__grid">
+          <div class="mission__box mission__box--goal"><h3>🎯 Your goal</h3><ul><li>I can use revolute and slider mates, with limits, to model motion.</li><li>I can explain why a parallel four-bar keeps its end level.</li><li>I can check a mechanism for interference through its whole range.</li></ul></div>
+          <div class="mission__box"><h3>🧰 You’ll need</h3><ul><li>Onshape, the V5 library, and your Module 1 frame</li><li>The four-bar tool on this page</li><li>Your notebook</li></ul></div>
+          <div class="mission__box"><h3>⏳ Time and limits</h3><ul><li><strong>2 team meetings, about 60 minutes each.</strong></li><li>The mechanism must stay inside your robot’s size limit at every position. Check the current game manual.</li><li>Check for collisions at the bottom, middle, and top of the motion.</li></ul></div>
+        </div>
+      </section>
+      <h2>Step-by-step plan</h2>
+      <p class="plan__intro">Follow the steps in order. The minutes are a guide. Check off each checkpoint before you move on.</p>
+      <div class="plan">
+        <div class="session"><p class="session__head">Meeting 1 · about 60 min</p><ol class="steps"><li><span class="steps__min">10 min</span><span>Watch the video.</span></li><li><span class="steps__min">15 min</span><span>Play with the four-bar tool. Make it parallel, then break it.</span></li><li><span class="steps__min">20 min</span><span>Sketch your lift on paper: tower height, arm length, top and bottom positions.</span></li><li><span class="steps__min">15 min</span><span>Insert the tower and arms from the library onto your frame.</span></li></ol><p class="checkpoint"><span aria-hidden="true">✔</span> <strong>Checkpoint:</strong> Lift parts on the frame, matching your sketch.</p></div>
+        <div class="session"><p class="session__head">Meeting 2 · about 60 min</p><ol class="steps"><li><span class="steps__min">20 min</span><span>Add revolute mates at all four pivots. Set limits for the top and bottom.</span></li><li><span class="steps__min">10 min</span><span>Animate the lift.</span></li><li><span class="steps__min">15 min</span><span>Check for interference at the bottom, middle, and top. Measure the reach.</span></li><li><span class="steps__min">15 min</span><span>Screenshots of both positions. Take the self-check.</span></li></ol><p class="checkpoint"><span aria-hidden="true">✔</span> <strong>Checkpoint:</strong> A lift that moves, stays level, and doesn’t collide.</p></div>
+      </div>
+      <h2>Laptop or iPad?</h2>
+      <div class="tablewrap"><table class="dtable devtable"><thead><tr><th>Task</th><th>💻 Laptop</th><th>📱 iPad</th></tr></thead><tbody><tr><th scope="row">Mate limits</th><td>Edit the mate → turn on Limits → type the min and max.</td><td>Same dialog in the app. Use the number pad for angles.</td></tr><tr><th scope="row">Animate</th><td>Right-click the mate → Animate.</td><td>Two-finger tap the mate → Animate.</td></tr><tr><th scope="row">Interference check</th><td>Move the mechanism, then look for overlaps from several views.</td><td>Drag the mechanism with one finger. Use the View Cube to check each view.</td></tr></tbody></table></div>
+      <p class="plan__more">More device help: <a href="devices.html">Laptop or iPad? The full guide</a>.</p>
+
+<h2>Watch first</h2><figure class="video"><video controls preload="metadata" playsinline poster="media/rc4-mechanisms-poster.jpg" aria-label="Narrated walkthrough of Mechanisms in Motion, with captions on screen"><source src="media/rc4-mechanisms.mp4" type="video/mp4">Your browser can't play this video. <a href="media/rc4-mechanisms.mp4">Download it here</a>.</video><figcaption>Narrated walkthrough (about 1 minute). Captions are built into the video.</figcaption></figure><details class="transcript"><summary>Read the transcript</summary><p>Robots score with mechanisms: lifts, claws, and intakes. In Onshape, you can make them move before you build them. A revolute mate spins around one axis. Use it for pivots and wheels. A slider mate moves along a line. And limits stop the motion where the real robot stops. Many VEX lifts are parallel four-bars. When the opposite links are the same length, the top link stays level the whole way up, so a claw on it stays level too. A lift can look fine at the bottom. But halfway up, it might crash into the frame. Check the bottom, the middle, and the top. In CAD, fixing it is free. Keep heavy parts like motors and the battery low, so the robot doesn't tip. Then save screenshots and the reach for your notebook.</p></details>
+
+<h2>Mates that move</h2>
+<ul><li><strong>Revolute:</strong> spins around one axis. Use it for arm pivots, wheels, and claw fingers.</li>
+<li><strong>Slider:</strong> moves along one line. Use it for linear lifts and telescoping parts.</li>
+<li><strong>Limits:</strong> set the top and bottom of the motion, so the CAD can’t do what the real robot can’t.</li></ul>
+<h2>The parallel four-bar lift</h2>
+<p>A four-bar is four links joined at four pivots: the tower, two arms, and the top link. When the two arms are the same length and the top link matches the tower, it’s a <strong>parallel four-bar</strong>. The top link stays at the same angle the whole way up, so a claw or intake on it stays level. That’s why so many VEX lifts use it.</p>
+<h2>Try it: the four-bar</h2>
+<p>Press <em>Play</em>. Then change the link lengths and watch the top link tilt.</p>
+<div class="sim fourbarsim"></div>
+<h2>Interference: the silent robot-killer</h2>
+<p>A lift that looks fine at the bottom can crash into the frame halfway up. In CAD you can check every position for free. Move the mechanism to the bottom, middle, and top, and look for parts in the same space.</p>
+<div class="card card--note"><p><strong>Keep it low.</strong> Heavy parts high up make a robot tip. When you can, mount motors and batteries low.</p></div>
+<h2>Model a lift</h2><div class="tut"><div class="tut__step"><p class="tut__goal">Goal: the lift’s skeleton</p><h3>Place the tower and arms</h3><p>On your Module 1 frame, insert a tower and two equal arms from the library. Match your sketch.</p><p class="tut__check"><strong>✅ Check it:</strong> both arms are the same length, in holes.</p></div><div class="tut__step"><p class="tut__goal">Goal: it moves</p><h3>Mate the pivots</h3><p>Add revolute mates at all four pivots.</p><p class="tut__check"><strong>✅ Check it:</strong> drag an arm. The whole four-bar moves together.</p></div><div class="tut__step"><p class="tut__goal">Goal: it stops where the robot stops</p><h3>Add limits</h3><p>Edit the bottom pivot’s mate. Turn on limits and set the lowest and highest angles.</p><p class="tut__check"><strong>✅ Check it:</strong> you can’t drag past the top or bottom.</p></div><div class="tut__step"><p class="tut__goal">Goal: no crashes</p><h3>Animate and check</h3><p>Animate the lift. Pause at the bottom, middle, and top. Look for overlaps, and measure the highest reach.</p><p class="tut__check"><strong>✅ Check it:</strong> no overlaps anywhere, and the reach is in your notebook.</p></div></div><div class="card card--note"><p class="card__title"><span class="ic">📓</span> For your engineering notebook</p><ul><li>Screenshots at the bottom and top, with the reach in inches.</li><li>Your limit angles, and why you chose them.</li><li>Any interference you found, and how you fixed it.</li></ul></div>
+<h2>Check your understanding</h2>
+<div class="quiz"><script type="application/json">[{"q": "Which mate lets an arm spin around a pivot?", "options": ["Fastened", "Revolute", "Slider", "Planar"], "answer": 1, "why": "Revolute allows rotation around one axis.", "hint": "Spin = ?"}, {"q": "Why do VEX lifts often use a parallel four-bar?", "options": ["It’s the lightest", "The top link stays level, so the claw stays level", "It needs no motors", "It’s the fastest"], "answer": 1, "why": "Equal opposite links keep the top link at the same angle through the whole motion.", "hint": "Try the tool above."}, {"q": "Why set mate limits?", "options": ["So the CAD can’t move past where the real robot stops", "To make it print", "To change the color", "Onshape requires it"], "answer": 0, "why": "Limits make the CAD behave like the real mechanism.", "hint": "Real lifts have a top and a bottom."}, {"q": "When should you check for interference?", "options": ["Only at the bottom", "At the bottom, middle, and top of the motion", "Never. CAD can’t show it", "After the robot is built"], "answer": 1, "why": "Collisions can happen partway through a motion, so check several positions.", "hint": "The crash may be in the middle."}]</script></div>
+<p class="sources"><strong>Sources:</strong> VEX Library (kb.vex.com) for V5 hardware facts; Onshape Help and the Onshape blog “Using the VEX IQ and VEX V5 Parts Libraries” for Onshape steps. Game rules: always the current V5RC game manual. See <a href="v5-facts.html">V5 Quick Facts</a>.</p>
+</article>
+<nav class="pager" id="pager" aria-label="Chapter navigation"></nav>
+</main></div>
+<script src="nav.js"></script>
+<script src="learn.js"></script>
+<script src="robotcad.js"></script>
+</body></html>
